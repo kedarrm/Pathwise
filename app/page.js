@@ -2,13 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  ArrowRight,
-  Trophy,
-  Target,
-  Sparkles,
-  CheckCircle2,
-} from "lucide-react";
+import { ArrowRight} from "lucide-react";
 import HeroSection from "@/components/hero";
 import {
   Accordion,
@@ -21,6 +15,12 @@ import { features } from "@/data/features";
 import { testimonial } from "@/data/testimonial";
 import { faqs } from "@/data/faqs";
 import { howItWorks } from "@/data/howItWorks";
+
+export const metadata = {
+  title: "AI Career Coach | Home",
+  description: "Advance your career with personalized guidance, interview prep, and AI-powered tools for job success.",
+};
+
 
 export default function LandingPage() {
   return (

@@ -126,6 +126,7 @@ export default function ResumeBuilder({ initialContent }) {
       };
 
       await html2pdf().set(opt).from(element).save();
+    //   HERE DOWNLOAD FAILS
     } catch (error) {
       console.error("PDF generation error:", error);
     } finally {
@@ -158,6 +159,7 @@ export default function ResumeBuilder({ initialContent }) {
             variant="destructive"
             onClick={handleSubmit(onSubmit)}
             disabled={isSaving}
+            className='cursor-pointer'
           >
             {isSaving ? (
               <>
@@ -171,7 +173,7 @@ export default function ResumeBuilder({ initialContent }) {
               </>
             )}
           </Button>
-          <Button onClick={generatePDF} disabled={isGenerating}>
+          <Button onClick={generatePDF} disabled={isGenerating} className='cursor-pointer'>
             {isGenerating ? (
               <>
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -189,8 +191,8 @@ export default function ResumeBuilder({ initialContent }) {
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList>
-          <TabsTrigger value="edit">Form</TabsTrigger>
-          <TabsTrigger value="preview">Markdown</TabsTrigger>
+          <TabsTrigger value="edit" className='cursor-pointer'>Form</TabsTrigger>
+          <TabsTrigger value="preview" className='cursor-pointer'>Markdown</TabsTrigger>
         </TabsList>
 
         <TabsContent value="edit">
@@ -367,7 +369,7 @@ export default function ResumeBuilder({ initialContent }) {
             <Button
               variant="link"
               type="button"
-              className="mb-2"
+              className="mb-2 cursor-pointer"
               onClick={() =>
                 setResumeMode(resumeMode === "preview" ? "edit" : "preview")
               }

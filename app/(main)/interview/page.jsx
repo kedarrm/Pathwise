@@ -3,6 +3,11 @@ import StatsCards from "./_components/stats-cards";
 import PerformanceChart from "./_components/performace-chart";
 import QuizList from "./_components/quiz-list";
 
+export const metadata = {
+  title: "AI Career Coach | Interview Prep",
+  description: "Advance your career with personalized guidance, interview prep, and AI-powered tools for job success.",
+};
+
 export default async function InterviewPrepPage() {
   const assessments = await getAssessments();
 

@@ -71,11 +71,12 @@ export default function CoverLetterList({ coverLetters }) {
                                         variant="outline"
                                         size="icon"
                                         onClick={() => router.push(`/ai-cover-letter/${letter.id}`)}
+                                        className='cursor-pointer'
                                     >
                                         <Eye className="h-4 w-4" />
                                     </Button>
                                     <AlertDialogTrigger asChild>
-                                        <Button variant="outline" size="icon">
+                                        <Button variant="outline" size="icon" className='cursor-pointer'>
                                             <Trash2 className="h-4 w-4" />
                                         </Button>
                                     </AlertDialogTrigger>
@@ -89,10 +90,10 @@ export default function CoverLetterList({ coverLetters }) {
                                             </AlertDialogDescription>
                                         </AlertDialogHeader>
                                         <AlertDialogFooter>
-                                            <AlertDialogCancel>Cancel</AlertDialogCancel>
+                                            <AlertDialogCancel className='cursor-pointer'>Cancel</AlertDialogCancel>
                                             <AlertDialogAction
                                                 onClick={() => handleDelete(letter.id)}
-                                                className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                                                className="bg-destructive text-destructive-foreground hover:bg-destructive/90 cursor-pointer"
                                             >
                                                 Delete
                                             </AlertDialogAction>

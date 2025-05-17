@@ -4,6 +4,11 @@ import { redirect } from 'next/navigation';
 import React from 'react';
 import DashboardView from './_components/dashboard-view';
 
+export const metadata = {
+  title: "AI Career Coach | Dashboard",
+  description: "Advance your career with personalized guidance, interview prep, and AI-powered tools for job success.",
+};
+
 const IndustryInsightsPage = async () => {
 
   const { isOnboarded } = await getUserOnboardingStatus();

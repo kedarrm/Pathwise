@@ -226,6 +226,7 @@ export function EntryForm({ type, entries, onChange }) {
               size="sm"
               onClick={handleImproveDescription}
               disabled={isImproving || !watch("description")}
+              className='cursor-pointer'
             >
               {isImproving ? (
                 <>
@@ -244,6 +245,7 @@ export function EntryForm({ type, entries, onChange }) {
             <Button
               type="button"
               variant="outline"
+              className='cursor-pointer'
               onClick={() => {
                 reset();
                 setIsAdding(false);
@@ -251,7 +253,7 @@ export function EntryForm({ type, entries, onChange }) {
             >
               Cancel
             </Button>
-            <Button type="button" onClick={handleAdd}>
+            <Button type="button" onClick={handleAdd} className='cursor-pointer'>
               <PlusCircle className="h-4 w-4 mr-2" />
               Add Entry
             </Button>
@@ -261,7 +263,7 @@ export function EntryForm({ type, entries, onChange }) {
 
       {!isAdding && (
         <Button
-          className="w-full"
+          className="w-full cursor-pointer"
           variant="outline"
           onClick={() => setIsAdding(true)}
         >

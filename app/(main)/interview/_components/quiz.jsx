@@ -110,7 +110,7 @@ export default function Quiz() {
           </p>
         </CardContent>
         <CardFooter>
-          <Button onClick={generateQuizFn} className="w-full">
+          <Button onClick={generateQuizFn} className="w-full cursor-pointer">
             Start Quiz
           </Button>
         </CardFooter>
@@ -137,7 +137,7 @@ export default function Quiz() {
           {question.options.map((option, index) => (
             <div key={index} className="flex items-center space-x-2">
               <RadioGroupItem value={option} id={`option-${index}`} />
-              <Label htmlFor={`option-${index}`}>{option}</Label>
+              <Label htmlFor={`option-${index}`} className='cursor-pointer'>{option}</Label>
             </div>
           ))}
         </RadioGroup>
@@ -155,6 +155,7 @@ export default function Quiz() {
             onClick={() => setShowExplanation(true)}
             variant="outline"
             disabled={!answers[currentQuestion]}
+            className='cursor-pointer'
           >
             Show Explanation
           </Button>
@@ -162,7 +163,8 @@ export default function Quiz() {
         <Button
           onClick={handleNext}
           disabled={!answers[currentQuestion] || savingResult}
-          className="ml-auto"
+          className="ml-auto cursor-pointer"
+          
         >
           {savingResult && (
             <BarLoader className="mt-4" width={"100%"} color="gray" />

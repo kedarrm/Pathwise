@@ -15,13 +15,20 @@ const Header = async () => {
         <header className="fixed top-0 w-full border-b bg-background/80 backdrop-blur-md z-50 supports-[backdrop-filter]:bg-background/60">
             <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
                 <Link href="/">
-                    <Image
-                        src={"/logo.png"}
-                        alt="Sensai Logo"
-                        width={200}
-                        height={60}
-                        className="h-12 py-1 w-auto object-contain"
-                    />
+                     <Image
+                            src={"/logosmm.png"} // Mobile logo
+                            alt="Welth Logo"
+                            width={100}
+                            height={30}
+                            className="h-8 w-auto object-contain md:hidden" // Mobile screen size (hidden on md and up)
+                        />
+                        <Image
+                            src={"/logo.png"} // Desktop logo
+                            alt="Welth Logo"
+                            width={200}
+                            height={60}
+                            className="h-12 py-1 w-auto object-contain hidden md:inline" // Desktop screen size (hidden on mobile)
+                        />
                 </Link>
 
 
