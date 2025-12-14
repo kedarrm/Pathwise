@@ -20,7 +20,7 @@ const Header = async () => {
                             alt="Welth Logo"
                             width={100}
                             height={30}
-                            className="h-8 w-auto object-contain md:hidden" // Mobile screen size (hidden on md and up)
+                            className="h-12 w-auto object-contain md:hidden" // Mobile screen size (hidden on md and up)
                         />
                         <Image
                             src={"/logo.png"} // Desktop logo
